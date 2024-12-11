@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* COLOUR CODES
+  dark indigo:  rgb(10, 10, 61)
+  light inidigo:  rgb(99, 106, 184)
+  yellow: rgb(248, 216, 66)
+  text colour:  rgb(251, 241, 239)
+  */
+  
+  /* FONTS
+  BENGUIAT
+  medium: font-weight: 500;
+  normal: font-weight: 400;
+  */
+  
+  html {
+    background-color: rgb(10, 10, 61);
+    color: black;
+  }
+  
+  /* NAVIGATION BAR */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.7em 2.0em;
+    background-color: rgb(10, 10, 61);
+    box-shadow: 0px 2px 60px 0px rgb(99, 106, 184);
+    font-family: "itc-benguiat", serif;
+    font-weight: 400;
+  }
+  
+  .logo {
+    cursor: pointer;
+    margin-right: auto;
+  }
+  
+  .nav-links li {
+    display: inline-flex;
+    list-style: none;
+    font-size: 20px;
+    background-color: rgb(10, 10, 61);
+  }
+  
+  .nav-links li a {
+    margin-right: 2.0em;
+    text-decoration: none;
+    color: rgb(251, 241, 239);
+    padding: 10px;
+  }
+  
+  #no-action:hover {
+    text-decoration: none;
+  }
+  
+  .nav-links li a:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(248, 216, 66);
+    transition: all 0.2s ease 0s;
+  }
+  
+  /* dropdown nav */
+  .dropdown-btn {
+    position: relative;
+  }
+  
+  .dropdown {
+    position: absolute;
+    display: none;
+    padding: 1.0em;
+    margin-top: 2.2em;
+    text-align: center;
+    color: rgb(255, 241, 224);
+    background-color: rgb(10, 10, 61);
+    box-shadow: 0px 5px 15px 0px rgb(99, 106, 184);
+  }
+  
+  .dropdown li {
+    margin: 0.10em 0em;
+    width: 100%;
+  }
+  
+  ul li:hover ul.dropdown {
+    color: rgb(255, 241, 224);
+    display: block;
+  }
+  
+  .dropdown li a {
+    margin: 0px;
+    padding: 0.6em 1.5em;
+    font-size: 20px;
+    color: rgb(255, 241, 224);
+    width: 100%;
+  }
+  
+  .dropdown li a:hover {
+    padding: 0.6em 1.5em;
+    color: rgb(255, 241, 224);
+    transition: all 0.2s ease 0s;
+  }
+  
+  /* CTA button */
+  button {
+    border: none;
+    border-radius: 25px;
+    padding: 0.5em 1.0em;
+    font-size: 20px;
+    font-family: "itc-benguiat", serif;
+    font-weight: 400;
+    color: rgb(10, 10, 61);
+    background-color: rgb(248, 216, 66);
+  }
+  
+  button:hover {
+    background-color: rgb(249, 241, 206);
+    transition: all 0.2s ease 0s;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  main{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin: auto;
+}
+
+  #calendar-container {
+    position: absolute;
+    top: 15%;
+    left:15%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 380px;
+    height: 120px;
+  }
+  
+  #calendar {
+    width: 100%;
+    background-color: rgb(99, 106, 184);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;
+  }
+  
+  #calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  #calendar-header button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #calendar-header button:hover {
+    background-color: #0056b3;
+  }
+  
+  #calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #calendar-table th,
+  #calendar-table td {
+    width: 14.2%;
+    height: 35px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  #calendar-table td {
+    cursor: pointer;
+    border: 1px solid white;
+  }
+  
+  #calendar-table td:hover {
+    background-color: rgb(240, 240, 240);
+  }
+  
+  /* 时间选择器 */
+  #time-selection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  
+  #am-pm-selector {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+  }
+  
+  #time-slots {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+  }
+  
+  #time-slots li {
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+  }
+  
+  #time-slots li:hover {
+    background-color: rgb(240, 240, 240);
+  }
+  
+  #time-slots li.selected {
+    background-color: rgb(248, 216, 66);
+    font-weight: bold;
+  }
+  
+
+  #terms-container {
+    width: 500px;
+    margin: 8em;
+    margin-left: 15em;
+    background-color: rgb(99, 106, 184);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+  
+#terms-container label {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+  
+  #book-appointment {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: gray;
+    cursor: not-allowed;
+  }
+  
+  #book-appointment.enabled {
+    background-color: rgb(248, 216, 66);
+    cursor: pointer;
+  }
+
+  #selected-date {
+    font-size: 18px;
+    font-weight: bold; 
+    color: rgb(251, 241, 239); 
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.date-cell.selected {
+    background-color: rgb(248, 216, 66);
+    color: rgb(10, 10, 61); 
+    font-weight: bold; 
+    border-radius: 50%;
+}
+
+
+#form-container {
+    width: 400px;
+    background-color: rgb(99, 106, 184);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: white;
+    font-family: Arial, sans-serif;
+    left: 160%;
+    position: absolute;
+    height: 530px;
+
+}
+
+#form-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#form-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#form-container input[type="file"] {
+    padding: 5px;
+}
+
+#form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(248, 216, 66);
+    border: none;
+    border-radius: 5px;
+    color: rgb(10, 10, 61);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#form-container button:hover {
+    background-color: rgb(249, 241, 206);
+}
+
+#name-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#name-row .form-group {
+  flex: 1;
+}
+
+#name-row .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#name-row .form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#contact-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#contact-row .form-group {
+  flex: 1;
+}
+
+#contact-row .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#contact-row .form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#tier-selection {
+    margin-top: 20px;
+}
+
+#tier-selection label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+#tier-selection select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 16px;
+}

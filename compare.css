@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: rgb(10, 10, 61);
+    font-family: "itc-benguiat", serif;
+}
+
+/* NAVIGATION BAR */
+header {
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.7em 2.0em;
+    top: 0px;
+    width: 100%;
+    box-shadow: 0px 2px 60px 0px rgb(99, 106, 184);
+    font-family: "itc-benguiat", serif;
+    font-weight: 400;
+    background-color: #0a0a3d;
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.nav-links li {
+    display: inline-flex;
+    list-style: none;
+    font-size: 20px;
+    background-color: rgb(10, 10, 61);
+}
+
+.nav-links li a {
+    margin-right: 2.0em;
+    text-decoration: none;
+    color: rgb(251, 241, 239);
+    padding: 10px;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(248, 216, 66);
+    transition: all 0.2s ease 0s;
+}
+
+button {
+    border: none;
+    border-radius: 25px;
+    padding: 0.5em 1.0em;
+    font-size: 20px;
+    font-family: "itc-benguiat", serif;
+    font-weight: 400;
+    color: rgb(10, 10, 61);
+    background-color: rgb(248, 216, 66);
+}
+
+button:hover {
+    background-color: rgb(249, 241, 206);
+    transition: all 0.2s ease 0s;
+}
+
+/* Main Content */
+main {
+    padding-top: 100px;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.compare-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.compare-header p {
+    font-size: 18px;
+    color: rgb(199, 199, 199);
+    margin-bottom: 30px;
+}
+
+/* Dropdown Section */
+.compare-dropdowns {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.compare-dropdowns select {
+    padding: 10px;
+    font-size: 16px;
+    font-family: "itc-benguiat", serif; 
+    border-radius: 5px;
+    border: 1px solid rgb(199, 199, 199);
+    background-color: white;
+    color: rgb(10, 10, 61);
+}
+
+/* Comparison Cards in Two Columns */
+.compare-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.card {
+    background-color: rgba(15, 15, 80, 0);
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    text-align: center; 
+    box-shadow: 0px 5px 15px rgb(99, 106, 184);
+}
+
+.card h2 {
+    color: rgb(248, 216, 66);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card li {
+    margin-bottom: 20px;
+    font-size: 25px;
+    color: rgb(199, 199, 199);
+    text-align: center; 
+}
+
+.card li i {
+    unicode-bidi: isolate;
+    display: block; 
+    font-size: 100px; 
+    font-style: normal;
+    color: rgb(248, 216, 66);
+    margin-bottom: 10px;
+}

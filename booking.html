@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+
+    <!-- LINKING CSS -->
+    <link rel="stylesheet" href="booking.css">
+
+    <!-- LINKING FONTS -->
+    <link rel="stylesheet" href="https://use.typekit.net/pfe5zct.css">
+</head>
+<body>
+    <!-- NAVIGATION BAR -->
+    <header>
+        <a class="logo" href="../HTML/loading.html"><img height="50px" src="logo.png" alt="BeyondREM full logo in colour"></a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../HTML/home.html">Home</a></li>
+                <li class="dropdown-btn"><a id="no-action">Tiers</a>
+                    <ul class="dropdown">
+                        <li><a href="../HTML/details.html">Details</a></li>
+                        <li><a href="../HTML/compare.html">Compare</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <a class="CTA" href="../HTML/booking.html"><button>Book Now</button></a>
+    </header>
+
+    <main>
+        <div id="calendar-container">
+            <!-- Calendar Section -->
+            <div id="calendar">
+                <div id="calendar-header">
+                    <button id="prev-month">&lt;</button>
+                    <span id="month-year"></span>
+                    <button id="next-month">&gt;</button>
+                </div>
+                <table id="calendar-table">
+                    <thead>
+                        <tr>
+                            <th>Su</th>
+                            <th>Mo</th>
+                            <th>Tu</th>
+                            <th>We</th>
+                            <th>Th</th>
+                            <th>Fr</th>
+                            <th>Sa</th>
+                        </tr>
+                    </thead>
+                    <tbody id="calendar-body"></tbody>
+                </table>
+            </div>
+
+            <!-- Time Selection Section -->
+            <h3 id="selected-date">Please select a date to see available appointments.</h3>
+            <div id="time-selection">
+                <select id="am-pm-selector">
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                </select>
+                <ul id="time-slots"></ul>
+            </div>
+
+                <!-- Form Section -->
+            <div id="form-container">
+                <h3>Personal Information</h3>
+            <form id="appointment-form">
+                    <div id="name-row" class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">First Name:</label>
+                            <input type="text" id="first-name" name="first-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name:</label>
+                            <input type="text" id="last-name" name="last-name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    <div id="contact-row" class="form-row">
+                        <div class="form-group">
+                            <label for="phone-number">Phone Number:</label>
+                            <input type="tel" id="phone-number" name="phone-number" placeholder="123-456-7890">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="example@email.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="id-upload">Upload ID:</label>
+                        <input type="file" id="id-upload" name="id-upload" accept="image/*" required>
+                    </div>
+                    <div id="tier-selection" class="form-group">
+                        <label for="tier">Choose Your Tier:</label>
+                        <select id="tier" name="tier">
+                            <option value="Tier1">Tier 1</option>
+                            <option value="Tier2">Tier 2</option>
+                            <option value="Tier3">Tier 3</option>
+                        </select>
+            </div>
+
+            </form>
+        </div>
+
+        <!-- Terms Section -->
+        <div id="terms-container">
+            <div>
+                <input type="checkbox" id="terms-checkbox1">
+                <label for="terms-checkbox1">I have read, understood, and agreed to the terms of service.</label>
+            </div>
+            <div>
+                <input type="checkbox" id="terms-checkbox2">
+                <label for="terms-checkbox2">I agree to the cancellation policy.</label>
+            </div>
+            <button id="book-appointment" disabled>Book Appointment</button>
+        </div>
+    
+    </main>
+
+    
+    <script src="Home Page.js"></script>
+</body>
+</html>

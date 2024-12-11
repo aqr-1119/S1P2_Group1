@@ -1,0 +1,119 @@
+/* COLOUR CODES
+dark indigo:  rgb(10, 10, 61)
+light inidigo:  rgb(99, 106, 184)
+yellow: rgb(248, 216, 66)
+text colour:  rgb(251, 241, 239)
+*/
+
+/* FONTS
+BENGUIAT
+medium: font-weight: 500;
+normal: font-weight:400;
+*/
+
+@font-face {
+    font-family: 'Chopin Script';
+    src: url('../Fonts/ChopinScript.otf') format('opentype');
+}
+
+@font-face{
+    font-family: 'Cabin';
+    src: url('../Fonts/Cabin-Regular.ttf') format('truetype');
+}
+
+html{
+    background: url(../Images/Graphics/opening-waves.png);
+    background-size: cover;
+    background-color: rgb(10, 10, 61);
+    cursor: url(../Images/cursor/cursor-inactive.png) 5 5, default;
+}
+
+/* OPENING PAGE MESSAGE */
+h1{
+    font-family:"itc-benguiat", serif;
+    font-weight: 500;
+    font-size: 25px;
+    color: rgb(251, 241, 239);
+}
+
+h2{
+    font-family: 'Chopin Script';
+    font-weight: 200;
+    font-size: 130px;
+    margin-bottom: 50%;
+}
+
+.message{
+    margin-left: 45.0em;
+    margin-top: 4.0em;
+}
+
+#hiddenText1{
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+#hiddenText2{
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+#hiddenText3{
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+#hiddenText4{
+    opacity: 0;
+    transition: opacity 2s;
+    color: rgb(248, 216, 66);
+    margin: 0.2em 0;
+}
+
+#hiddenLink{
+    text-align: right;
+}
+
+/* LINK TO HOMEPAGE */
+a{
+    float: right;
+    margin-right: 4em;
+    color: rgb(251, 241, 239);
+    font-family: 'Cabin';
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+a:hover{
+    color: rgb(99, 106, 184);
+    cursor: url(../Images/cursor/cursor-active.png) 5 5, auto;
+}
+
+/* BACK TO TOP BUTTON */
+#backToTop{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(251, 241, 239);
+    border: none;
+    border-radius: 50%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+#backToTop:hover {
+    background-color: rgb(99, 106, 184);
+    cursor: url(../Images/cursor/cursor-active.png) 5 5, auto;
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+}

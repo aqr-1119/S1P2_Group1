@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Tiers</title>
+    <link rel="stylesheet" href="../CSS/compare.css">
+    <link rel="stylesheet" href="https://use.typekit.net/pfe5zct.css">
+</head>
+<body>
+    <header>
+        <a class="logo" href="../HTML/loading.html"><img height="50px" src="../Images/logo.png" alt="BeyondREM Logo"></a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../HTML/home.html">Home</a></li>
+                <li><a href="../HTML/tiers.html">Tiers</a></li>
+                <li><a href="../HTML/compare.html">Compare</a></li>
+            </ul>
+        </nav>
+        <a class="CTA" href="../HTML/booking.html"><button>Book Now</button></a>
+    </header>
+
+    <main>
+        <section class="compare-header">
+            <h1>Compare Dream Tiers</h1>
+            <p>Discover features across all tiers to find the best experience for you.</p>
+        </section>
+
+        <section class="compare-dropdowns">
+            <select id="tier1">
+                <option value="basic">Basic</option>
+                <option value="standard">Standard</option>
+                <option value="premium">Premium</option>
+                <option value="premium-pro">Premium Pro (Coming Soon...)</option>
+
+            </select>
+            <select id="tier2">
+                <option value="basic">Basic</option>
+                <option value="standard">Standard</option>
+                <option value="premium">Premium</option>
+                <option value="premium-pro">Premium Pro (Coming Soon...)</option>
+            </select>
+        </section>
+
+        <!-- Tier Details -->
+        <section class="compare-cards">
+            <!-- Tier 1 -->
+            <div id="tier1-details" class="card" data-tier="basic">
+                <h2>Basic</h2>
+                <ul>
+                    <li><i>⏳</i>1 hour</li>
+                    <li><i>🌄</i>Object and Landscape Interactivity: Basic (no people)</li>
+                    <li><i>🚫</i>No People Interactivity</li>
+                    <li><i>🔒</i>Self Control: None</li>
+                    <li><i>💰</i>Price: $19.99</li>
+                </ul>
+            </div>
+
+            <!-- Tier 2 -->
+            <div id="tier2-details" class="card" data-tier="basic">
+                <h2>Basic</h2>
+                <ul>
+                    <li><i>⏳</i>1 hour</li>
+                    <li><i>🌄</i>Object and Landscape Interactivity: Basic (no people)</li>
+                    <li><i>🚫</i>No People Interactivity</li>
+                    <li><i>🔒</i>Self Control: None</li>
+                    <li><i>💰</i>Price: $19.99</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Hidden Content for Other Tiers -->
+        <template id="tier-standard">
+            <h2>Standard</h2>
+            <ul>
+                <li><i>⏳</i>1 hour</li>
+                <li><i>🌳</i>Object and Landscape Interactivity: Some</li>
+                <li><i>💁</i>People Interactivity: Limited</li>
+                <li><i>🔒</i>Self Control: None</li>
+                <li><i>💰</i>Price: $49.99</li>
+            </ul>
+        </template>
+
+        <template id="tier-premium">
+            <h2>Premium</h2>
+            <ul>
+                <li><i>⏳</i>1 hour</li>
+                <li><i>🌌</i>Object and Landscape Interactivity: Full</li>
+                <li><i>🙋</i>People Interactivity: Full</li>
+                <li><i>✅</i>Self Control: Full</li>
+                <li><i>💰</i>Price: $99.99</li>
+            </ul>
+        </template>
+
+        <template id="tier-premium-pro">
+            <h2>Premium Pro <span style="color: rgb(199, 199, 199);; font-size: 18px;">(Coming Soon...)</span></h2>
+            <ul>
+                <li><i>⏳</i>1 hour</li>
+                <li><i>🌐</i>Object and Landscape Interactivity: Shared & Interactive</li>
+                <li><i>👨‍👩‍👧‍👦</i>People Interactivity: Group</li>
+                <li><i>✅</i>Self Control: Full + Group Control</li>
+                <li><i>💰</i>Price: $199.99</li>
+            </ul>
+        </template>
+    </main>
+
+    <script src="../JS/compare.js"></script>
+</body>
+</html>
